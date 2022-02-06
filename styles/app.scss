@@ -1,0 +1,316 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
+
+// Colors
+$darkBlue: rgb(77, 150, 168);
+$lightBlue: rgb(143, 227, 249);
+$darkPurple: rgb(133, 95, 177);
+$lightPurple: rgb(217, 184, 255);
+$black: rgb(40, 40, 61);
+$lightGrey: rgb(135, 135, 157);
+$white: rgb(250, 250, 250);
+
+// CSS Reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Initialise Styles
+body,
+button {
+  font-family: "Red Hat Display", sans-serif;
+  overflow-x: hidden;
+}
+
+//Hide Y scrollbar but keep functionality
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+// Typography
+.h1 {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 64px;
+  color: $black;
+}
+
+.h2 {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 44px;
+  color: $black;
+}
+
+.overline {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: $darkBlue;
+}
+
+p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: $lightGrey;
+}
+
+// Buttons
+.button-blue {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  border-radius: 29px;
+  background-color: $darkBlue;
+  border-style: none;
+  color: $white;
+  padding: 16px 40px;
+  margin: 0 8px;
+  transition: 0.1s ease-in;
+
+  span {
+    color: $lightBlue;
+    margin-left: 4px;
+  }
+
+  &:hover {
+    background-color: #71c0d4;
+    cursor: pointer;
+  }
+}
+
+.button-purple {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  border-radius: 29px;
+  background-color: $darkPurple;
+  border-style: none;
+  color: $white;
+  padding: 16px 40px;
+  margin: 0 8px;
+  transition: 0.1s ease-in;
+
+  span {
+    color: $lightPurple;
+    margin-left: 4px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #b18bdd;
+  }
+}
+
+.main {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Start Styles
+.header {
+  width: 100vw;
+}
+
+// Logo
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 61px;
+}
+
+// Top Section
+.hero {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &-left {
+    position: absolute;
+    top: 0;
+    left: -30px;
+  }
+
+  &-center {
+    width: 540px;
+    height: 304px;
+    text-align: center;
+
+    .p {
+      margin-top: 34px;
+    }
+  }
+
+  &-right {
+    position: absolute;
+    top: 0;
+    right: -30px;
+  }
+
+  &-buttons {
+    margin-top: 32px;
+  }
+}
+
+// Divider
+
+.divider-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 110px;
+  position: relative;
+  z-index: 1;
+}
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 56px;
+
+  &-line {
+    border-left: 1px solid $lightGrey;
+    height: 84px;
+    opacity: 0.25;
+  }
+
+  &-text {
+    border-radius: 50%;
+    border: 1px solid rgba(135, 135, 157, 0.3);
+    text-align: center;
+    padding: 15px;
+    height: 56px;
+    width: 56px;
+    background-color: $white;
+
+    p {
+      font-weight: 900;
+    }
+  }
+}
+
+// Information Section
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 64px;
+
+  &-imgs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    height: 242px;
+    width: 1110px;
+
+    &__img {
+      border-radius: 8px;
+      width: 255px;
+      height: 242px;
+    }
+  }
+
+  &-text {
+    margin-top: 80px;
+    width: 540px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .h2 {
+      margin-top: 16px;
+      width: 445px;
+    }
+
+    .p {
+      margin-top: 32px;
+    }
+  }
+}
+
+// Footer Section
+
+.footer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  background-color: $darkBlue;
+  height: 308px;
+  z-index: -1;
+  bottom: -280px;
+  width: 100%;
+
+  &::after {
+    content: "";
+    background-image: url(../assets/desktop/image-footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.1;
+  }
+
+  &-text {
+    z-index: 1;
+    display: flex;
+    margin: 116px 165px 104px 165px;
+    width: 1110px;
+    justify-content: center;
+
+    &-left {
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 3;
+
+      .h2 {
+        color: $white;
+      }
+    }
+
+    &-center {
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 2;
+
+      .p {
+        color: $white;
+      }
+    }
+
+    &-right {
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 2;
+    }
+  }
+}

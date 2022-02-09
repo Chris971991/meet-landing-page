@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Front End Mentor Solution](https://www.frontendmentor.io/solutions/meet-landing-page-kR4a3BSeg)
 - Live Site URL: [Hosted on Github](https://chris971991.github.io/meet-landing-page/)
 
 ### Built with

@@ -157,6 +157,7 @@ p {
   max-width: 540px;
   height: 304px;
   text-align: center;
+  margin-top: 47px;
 }
 
 .hero-center .p {
@@ -165,7 +166,7 @@ p {
 
 .hero-right {
   position: absolute;
-  top: 0;
+  top: 50px;
   right: -30px;
 }
 
